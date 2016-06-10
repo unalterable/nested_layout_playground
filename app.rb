@@ -9,7 +9,7 @@ class App < Sinatra::Base
   end
 
   get '/test' do
-    nest(:test, :layout2, :layout)
+    nest([:test, :layout1, :layout1, :layout2, :layout3, :layout1, :layout2, :layout3])
   end
 
   # start the server if ruby file executed directly
