@@ -9,8 +9,6 @@ class NestingHelper
   end
   
   def my_erb(sym, &block)
-    puts "================="
-    puts sym
     block ||= Proc.new { "" }
     erb = ERB.new( find_file(sym) )
     unknown_crazy(erb, block)
